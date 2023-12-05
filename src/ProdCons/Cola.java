@@ -3,26 +3,38 @@ package ProdCons;
 public class Cola {
 
 	private int numero;
-	
+
 	private boolean disponible = false;
-	
+	// inicialmente cola vacia
+
 	public synchronized int get() {
-		if(disponible) {
-			disponible = false;
-			return numero;
-			//hay numero en la cola, se pone cola vacia y se devuelve el numero		
+		if (disponible == false) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+			}
 		}
-		return -1; //no hay numero disponible
+		disponible = false; // cola no vacia
+		notifyAll();
+		return numero; // retorna valor de la cola
 	}
-	
+
+	// SINCRO
 	public synchronized void put(int valor) {
-		numero = valor; //coloca valor en la cola
-		disponible = true;//disponible para consumir, cola llena
+		while (disponible == true) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+			}
+		}
+		numero = valor;
+		disponible = true;
+		notifyAll();
 	}
 
 	@Override
 	public String toString() {
 		return "Cola [numero=" + numero + ", disponible=" + disponible + "]";
 	}
-	
+
 }
