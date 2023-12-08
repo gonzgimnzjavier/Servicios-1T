@@ -11,7 +11,8 @@ public class Cliente  extends Thread {
 		start();
 	}
 	
-	public void run() {//se puede quitar y la simulacion es finita en el tiempo
+	public void run() {
+		while (true) {//se puede quitar y la simulacion es finita en el tiempo
 			try {//tiempo aleatorio para que no todos entren a la vez
 				sleep((int) (Math.random() * 10000));
 			} catch (InterruptedException e) {
@@ -25,5 +26,6 @@ public class Cliente  extends Thread {
 			}
 			hotel.sale();//metodo syncro
 			System.out.println(getName() + " salio del hotel");
+		}
 	}
 }
