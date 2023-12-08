@@ -9,16 +9,15 @@ public class HiloDEC extends Thread {
     }
 
     public void run() {
-		synchronized (contador) {
-			
-		
+        System.out.println(getName() + " comenzando a decrementar.");
         for (int j = 0; j < 300; j++) {
             contador.decrementar(); // Decrementa el contador
             try {
                 sleep(150);
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+                System.out.println(getName() + " interrumpido.");
+            }
         }
-		}
         System.out.println(getName() + " contador vale " + contador.getValor());
     }
 }
