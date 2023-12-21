@@ -1,0 +1,8 @@
+Los siguientes criterios se aplican para definir los partidos en casa de los equipos anfitriones dentro del mismo grupo22​:
+
+Si ambos equipos anfitriones se clasifican directamente o ambos avanzan a los play-offs, un sorteo determinará qué equipo jugará los tres partidos de la fase de grupos en casa (es decir, cuál será el anfitrión del enfrentamiento cara a cara) y cuál jugará solo dos partidos en casa.
+
+Si un equipo anfitrión se clasifica directamente y el otro avanza a los play-offs o se elimina por completo, el equipo anfitrión directamente clasificado jugará los tres partidos de la fase de grupos en casa y el otro anfitrión, si se clasifica, jugará solo dos.
+
+Si un equipo anfitrión avanza a los play-offs y el otro queda eliminado por completo, el equipo anfitrión en los play-offs, si se clasifica, jugará los tres partidos de la fase de grupos en casa.
+No será necesaria ninguna acción si ambos equipos anfitriones no se clasifican.
